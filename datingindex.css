@@ -1,0 +1,112 @@
+h1 {
+  display: inline;
+  text-shadow: 3px 2px 5px #e5bebe;
+  font-size: 4vh;
+  color: rgb(79, 120, 132);
+}
+p {
+  font-size: 20px;
+  font-family: garamond, serif;
+  color: black;
+}
+input[type="text" i] {
+  border: 2px solid #e8e8e8;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: small;
+  font-weight: bold;
+}
+input[type="number" i] {
+  border: 2px solid #e8e8e8;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: small;
+  font-weight: bold;
+}
+option {
+  border: 2px solid #e8e8e8;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: small;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3vh;
+  color: #705f5f;
+}
+input[type="checkbox" i] {
+  height: 100%;
+  position: relative;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+select:not(:-internal-list-box) {
+  border: 2px solid #e8e8e8;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: small;
+  font-weight: bold;
+}
+textarea {
+  box-sizing: border-box;
+  width: 500px;
+  height: 100px;
+  padding: 10px;
+  border: 5px solid rgb(114, 114, 170);
+}
+button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(121, 34, 202);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+button:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
